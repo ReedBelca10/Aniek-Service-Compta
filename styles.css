@@ -1,0 +1,123 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  margin: 0; /* supprime les marges par défaut */
+  background: #FAF7F7; /* couleur de fond */
+  color: #222;
+  padding-top: 70px; /* espace pour laisser passer la nav */
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Navigation */
+.nav_menu {
+  position: fixed;        /* reste collée en haut */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ff0000; /* fond rouge */
+  display: flex;
+  justify-content: flex-end; /* centrer les drapeaux */
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+/* Logo entreprise */
+.logo img {
+  height: 45px; /* taille du logo */
+  width: auto;
+}
+
+.nav_menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px; /* espace entre les drapeaux */
+  margin: 0;
+  padding: 0;
+}
+
+.nav_menu li {
+  display: inline-block;
+}
+
+.nav_menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style des drapeaux */
+.flag {
+  width: 40px;     /* taille uniforme */
+  height: 25px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.flag:hover {
+  transform: scale(1.15); /* zoom au survol */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.service {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.country {
+  text-align: center;
+  margin-bottom: 50px; /* réduit l’espace entre TOGO, MALI, CI */
+  padding-bottom: 50px;
+  border-bottom: 2px solid #ccc;
+}
+
+.country.last-country {
+  border-bottom: none !important; /* pas de bordure pour le dernier pays */
+}
+
+.country h2 {
+  margin-bottom: 45px; /* espace entre titre et logos */
+  color: #333;
+}
+
+/* Grille pour logos entreprises et services */
+.companies, .services {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* max 6 colonnes */
+  gap: 20px; /* espace entre les logos */
+  justify-items: center; /* centre chaque logo dans sa cellule */
+  align-items: center;
+  width: 100%;
+}
+
+/* Style logos */
+.company img, .service img {
+  width: 120px;
+  height: 100px;
+  object-fit: contain;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.company img:hover, .service img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Bloc entreprise */
+.enterprise-page {
+  margin-top: 0px;
+  padding: 5px;
+  height: auto;
+  background: #fff;
+  border-radius: 8px;
+}
