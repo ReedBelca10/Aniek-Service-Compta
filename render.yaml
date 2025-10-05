@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: aniek-comptable-service
+    env: static
+    buildCommand: ""
+    staticPublishPath: public
