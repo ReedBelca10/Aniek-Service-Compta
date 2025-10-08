@@ -20,10 +20,27 @@ h1, h2 {
   height: 60px;
   background-color: #ff0000; /* fond rouge */
   display: flex;
-  justify-content: flex-end; /* centrer les drapeaux */
+  /* CORRECTION: pour pousser le lien Partenaires à gauche et les drapeaux à droite */
+  justify-content: space-between; 
   align-items: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   z-index: 1000;
+  padding: 0 20px; /* Ajout d'un padding pour le contenu */
+  box-sizing: border-box; /* S'assure que le padding n'augmente pas la largeur totale */
+}
+
+/* Style pour le lien Partenaires */
+.nav_menu .partner-link a {
+    color: white; /* Texte blanc */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.nav_menu .partner-link a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Léger fond au survol */
 }
 
 /* Logo entreprise */
@@ -74,6 +91,8 @@ h1, h2 {
   margin-bottom: 50px; /* réduit l’espace entre TOGO, MALI, CI */
   padding-bottom: 50px;
   border-bottom: 2px solid #ccc;
+  padding-left: 20px;
+  padding-right: 20px; /* Assure que les pays ont un padding */
 }
 
 .country.last-country {
@@ -120,4 +139,62 @@ h1, h2 {
   height: auto;
   background: #fff;
   border-radius: 8px;
+}
+
+/* NOUVEAU: Style de la page Partenaires (connectée) */
+#partners-content {
+    /* Ajout du padding pour que le contenu soit au même niveau que les autres pays */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* NOUVEAU: Règle pour remonter le titre H2 */
+#partners-content h2 {
+    margin-top: 10px; /* Réduit l'espace au-dessus du titre */
+    margin-bottom: 25px; /* Réduit l'espace entre le titre et les logos */
+}
+
+/* NOUVEAU: Règle pour centrer le bouton de déconnexion */
+#partners-content form {
+    text-align: center; /* Centre le contenu du formulaire (le bouton) */
+    margin-top: 35px; /* Espace après la grille de logos */
+}
+
+/* NOUVEAU: Styles pour le formulaire de connexion (pour que les styles fonctionnent) */
+#partners-login {
+    padding: 100px 20px; 
+    text-align: center;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto; 
+    padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-container button {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.login-container button:hover {
+    background-color: #cc0000;
 }
