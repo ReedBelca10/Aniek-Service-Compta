@@ -20,13 +20,12 @@ h1, h2 {
   height: 60px;
   background-color: #ff0000; /* fond rouge */
   display: flex;
-  /* CORRECTION: pour pousser le lien Partenaires à gauche et les drapeaux à droite */
   justify-content: space-between; 
   align-items: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   z-index: 1000;
-  padding: 0 20px; /* Ajout d'un padding pour le contenu */
-  box-sizing: border-box; /* S'assure que le padding n'augmente pas la largeur totale */
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* Style pour le lien Partenaires */
@@ -88,11 +87,11 @@ h1, h2 {
 
 .country {
   text-align: center;
-  margin-bottom: 50px; /* réduit l’espace entre TOGO, MALI, CI */
+  margin-bottom: 50px; 
   padding-bottom: 50px;
   border-bottom: 2px solid #ccc;
   padding-left: 20px;
-  padding-right: 20px; /* Assure que les pays ont un padding */
+  padding-right: 20px;
 }
 
 .country.last-country {
@@ -109,10 +108,27 @@ h1, h2 {
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* max 6 colonnes */
   gap: 20px; /* espace entre les logos */
-  justify-items: center; /* centre chaque logo dans sa cellule */
+  justify-items: center; 
   align-items: center;
   width: 100%;
 }
+
+/* Styles pour écrans plus petits (tablette et mobile) */
+@media (max-width: 1024px) {
+  .companies, .services {
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur tablette */
+  }
+}
+
+@media (max-width: 600px) {
+  .companies, .services {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur mobile */
+  }
+  .nav_menu ul {
+      gap: 15px; /* réduit l'espace entre drapeaux sur mobile */
+  }
+}
+
 
 /* Style logos */
 .company img, .service img {
@@ -141,26 +157,25 @@ h1, h2 {
   border-radius: 8px;
 }
 
-/* NOUVEAU: Style de la page Partenaires (connectée) */
+/* Style de la page Partenaires (connectée) */
 #partners-content {
-    /* Ajout du padding pour que le contenu soit au même niveau que les autres pays */
     padding-left: 20px;
     padding-right: 20px;
 }
 
-/* NOUVEAU: Règle pour remonter le titre H2 */
+/* Règle pour remonter le titre H2 */
 #partners-content h2 {
-    margin-top: 10px; /* Réduit l'espace au-dessus du titre */
-    margin-bottom: 25px; /* Réduit l'espace entre le titre et les logos */
+    margin-top: 10px; 
+    margin-bottom: 25px; 
 }
 
-/* NOUVEAU: Règle pour centrer le bouton de déconnexion */
+/* Règle pour centrer le bouton de déconnexion */
 #partners-content form {
-    text-align: center; /* Centre le contenu du formulaire (le bouton) */
-    margin-top: 35px; /* Espace après la grille de logos */
+    text-align: center; 
+    margin-top: 35px; 
 }
 
-/* NOUVEAU: Styles pour le formulaire de connexion (pour que les styles fonctionnent) */
+/* Styles pour le formulaire de connexion */
 #partners-login {
     padding: 100px 20px; 
     text-align: center;
@@ -197,4 +212,55 @@ h1, h2 {
 
 .login-container button:hover {
     background-color: #cc0000;
+}
+
+/* --- Styles du Footer (Pied de Page) --- */
+
+.main-footer {
+    background-color: #472929; /* Fond gris foncé pour le pied de page */
+    color: white; /* Texte blanc */
+    padding: 10px 20px; /* Padding haut/bas et côtés */
+    margin-top: 50px; /* Espace au-dessus du pied de page */
+}
+
+.footer-content {
+    max-width: 1200px; /* Conteneur centré comme votre zone de contenu */
+    margin: 2 auto;
+    display: flex; /* Active Flexbox */
+    justify-content: space-between; /* Espace entre Copyright (gauche) et Réseaux (droite) */
+    align-items: center; /* Alignement vertical */
+    flex-wrap: wrap; /* Permet le retour à la ligne sur mobile */
+}
+
+.social-links {
+    display: flex;
+    gap: 20px; /* Espace entre les liens sociaux */
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: #ff0000; /* Couleur rouge au survol */
+}
+
+/* Adaptabilité du footer sur Mobile */
+@media (max-width: 668px) {
+    .footer-content {
+        flex-direction: column; /* Empile les éléments verticalement */
+        text-align: center;
+    }
+    
+    .footer-content p {
+        margin-bottom: 10px; /* Espace sous le Copyright */
+    }
+    
+    .social-links {
+        justify-content: center;
+        width: 100%; /* S'assure que les liens sociaux prennent toute la largeur pour centrer */
+    }
 }

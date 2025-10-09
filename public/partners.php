@@ -117,14 +117,51 @@ $is_authenticated = isset($_SESSION['authenticated']) && $_SESSION['authenticate
         <div class="company">
             <a href="https://app.j360.info/#/my-monitoring" target="_blank"><img src="image/j360.svg" alt="j360"></a>
         </div>
-       <div class="company">
+        <div class="company">
+            <a href="https://fr.ridex.eu/" target="_blank"><img src="image/logo-ridex-white-bw (1).svg" alt="ridex"></a>
+        </div>
+        <div class="company">
+            <a href="https://app.j360.info/#/my-monitoring" target="_blank"><img src="image/j360.svg" alt="j360"></a>
+        </div>
+        <div class="company">
+            <a href="https://as-pl.com/fr/cms/front/contact" target="_blank"><img src="image/AS-pl.jpg" alt="AS-PL"></a>
+        </div>
+        <div class="company">
+            <a href="https://web.tecalliance.net/tecdoc/fr/home " target="_blank"><img src="image/Tecalliance.jpg" alt="Tecalliance"></a>
+        </div>
+        <div class="company">
+            <a href="http://www.difcaa.com/" target="_blank"><img src="image/Difcaa.jpg" alt="Difcaa"></a>
+        </div>
+        <div class="company">
+            <a href="http://www.av10.eu/ " target="_blank"><img src="image/AV-10.jpg" alt="av10"></a>
+        </div>
+        <div class="company">
+            <a href="https://www.varta-automotive.com" target="_blank"><img src="image/vatar.jpg" alt="varta-automotive"></a>
+        </div>
+        <div class="company">
+            <a href="https://www.deer-online.com/" target="_blank"><img src="image/Deer.jpg" alt="Deer"></a>
+        </div>
+        <div class="company">
+            <a href="https://equipauto.mybadgeonline.com" target="_blank"><img src="image/Equipauto.jpg" alt="Equipauto"></a>
+        </div>
+        <div class="company">
+            <a href="https://www.vindecoderz.com/" target="_blank"><img src="image/vin-decoderz-logo-alt.svg" alt="vin-decoderz"></a>
+        </div>
+        <div class="company">
+            <a href="https://fr.ridex.eu/" target="_blank"><img src="image/logo-ridex-white-bw (1).svg" alt="ridex"></a>
+        </div>
+        <div class="company">
+            <a href="https://app.j360.info/#/my-monitoring" target="_blank"><img src="image/j360.svg" alt="j360"></a>
+        </div>
+        <div class="company">
             <a href="https://fr.ridex.eu/" target="_blank"><img src="image/logo-ridex-white-bw (1).svg" alt="ridex"></a>
         </div>
         <div class="company">
             <a href="https://app.j360.info/#/my-monitoring" target="_blank"><img src="image/j360.svg" alt="j360"></a>
         </div>
         
-    </div> <form method="POST" action="partners.php"> 
+    </div> 
+    <form method="POST" action="partners.php"> 
         <input type="hidden" name="logout" value="1">
         <button type="submit" style="background-color: #555;">Déconnexion</button>
     </form>
@@ -148,11 +185,26 @@ $is_authenticated = isset($_SESSION['authenticated']) && $_SESSION['authenticate
                 <div class="service">
                     <a href="https://" target="_blank"><img src="image/anuba.jpg" alt="ANUBA"></a></div>
 
-                
+                <div class="service">
+                    <a href="https://www.keinagroup.com/" target="_blank"><img src="image/keinagroup.jpeg" alt="keinagroup"></a></div>
             </div>
         </section>
 <?php endif; ?>
 
 </main>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="footer-content">
+        <p>&copy; 2025 ANIEK & AYO. Tous droits réservés.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/aniekgroup/" title="Facebook" target="_blank">Facebook</a>
+            <a href="https://www.linkedin.com/company/aniekgroup" title="LinkedIn" target="_blank">LinkedIn</a>
+            <!-- Remplacez le lien Instagram par une page Contact réelle ou appropriée si besoin -->
+            <a href="https://www.aniekgroup.com/contactus" title="Contact / Instagram" target="_blank">Contact</a>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
