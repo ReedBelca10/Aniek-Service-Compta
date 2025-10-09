@@ -1,8 +1,7 @@
 services:
   - type: web
-    name: aniek-comptable-service
-    env: php
-    buildCommand: "composer install --no-dev"
-    startCommand: "php -S 0.0.0.0:$PORT -t ."
-    staticPublishPath: public
+    name: neyla-php
+    env: docker
     plan: free
+    buildCommand: ""
+    startCommand: "php -S 0.0.0.0:$PORT -t ."
