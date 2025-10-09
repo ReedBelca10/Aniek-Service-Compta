@@ -1,6 +1,8 @@
 services:
   - type: web
     name: aniek-comptable-service
-    env: static
-    buildCommand: ""
+    env: php
+    buildCommand: "composer install --no-dev"
+    startCommand: "php -S 0.0.0.0:$PORT -t ."
     staticPublishPath: public
+    plan: free
